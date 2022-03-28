@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "2604459a-1f4a-4717-91e1-decafd37fee4",
+		"name": "st-crypto-address-validator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "validator",
+					"item": [
+						{
+							"name": "index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"addresses\": [\n        \"{{address}}\",\n        \"0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe\",\n        \"0x85F43D8a49eeB85d32Cf465507DD71d507100C1d\",\n        \"0x0000000000000000000000000000000000000000\",\n        \"0xDCc6960376d6C6dEa93647383FfB245CfCed97Cf\",\n        \"0sss0000000000000000000000000000000000000000\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/addresses/validator",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"addresses",
+										"validator"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": ":address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/addresses/{{address}}/validator",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addresses",
+								"{{address}}",
+								"validator"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
